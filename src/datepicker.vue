@@ -116,7 +116,7 @@
             :style="styleObj"
             :readonly="readonly"
             :value="value"
-            @click="show = !show">
+            @click="show = !show" :require="require">
         <div class="picker-wrap" v-show="show">
             <table class="date-picker">
                 <thead>
@@ -156,7 +156,8 @@
             readonly: { type: Boolean, default: false },
             value: { type: String, default: '' },
             format: { type: String, default: 'YYYY-MM-DD' },
-            name: { type: String, default: '' }
+            name: { type: String, default: '' },
+            require: { type: Boolean, default: false }
         },
         data () {
             return {
